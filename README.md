@@ -12,6 +12,8 @@
 ### To install and run:
 ### Arch based distros: (COULD BE USED TO UPDATE ON ARCH-BASED!)
 ```makepkg -si```
+### Or:
+```yay -S ohio2-nerdfetch```
 ### Non-arch based distros:
 Copy-paste this into your terminal:
 
