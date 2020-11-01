@@ -119,6 +119,7 @@ if which dc > /dev/null 2>&1; then
 fi
 ## DEFINE COLORS
 
+blink=''
 bold='[1m'
 black='[30m'
 red='[31m'
