@@ -142,6 +142,23 @@ c0="${reset}${grey}"           # first color
 c1="${reset}${white}"           # second color
 c2="${reset}${yellow}"          # third color
 
+## awk-rgb-test from colorscripts collection, by DT
+function colorscript() {
+awk 'BEGIN{
+s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+for (colnum = 0; colnum<77; colum++) {
+ r = 255-(colnum*255/76);
+ g = (colnum*510/76);
+ b = (colnum*255/76)
+ if (g>255) g= 510-g;
+ printf "\033[48;2;%d;%d;%dm", r,g,b;
+ printf "\033[48;2;%d;%d;%dm", 255-r,255-g,255-b;
+ printf "%s\033[0m", substr(s,colnum+1,1)
+}
+printf "\n"
+}'
+}
+
 ## OUTPUT
 
 
@@ -166,5 +183,5 @@ ${c0}      ${lc}  ${ic}${kernel}${reset}
 ${c0}      ${c0}${lc}  ${ic}${RAM}${memstat} ${mempercent}
 ${c0}      ${c1}${c0}${lc}  ${ic}${packages} (${manager})${reset}
 ${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}${uptime}${reset}
-${c2}  ${c0}${c2}${reset}${lc}       ${black}███${red}███${green}███${yellow}███${blue}███${magenta}███${cyan}███${reset}
+${c2}  ${c0}${c2}${reset}${lc}${reset}
 EOF
