@@ -178,10 +178,11 @@ echo -e ' \e[H\e[2J
 ##Old NerdFetch's Output
 cat <<EOF
 ${c0}      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
-${c0}      ${lc}  ${ic}${os}${reset}
-${c0}      ${lc}  ${ic}${kernel}${reset}
-${c0}      ${c0}${lc}  ${ic}${RAM}${memstat} ${mempercent}
-${c0}      ${c1}${c0}${lc}  ${ic}${packages} (${manager})${reset}
-${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}${uptime}${reset}
+${c0}      ${lc}  ${ic}OS: ${os}${reset}
+${c0}      ${lc}  ${ic}Kernel: ${kernel}${reset}
+${c0}      ${c0}${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
+${c0}      ${c1}${c0}${lc}  ${ic}List: ${packages}${reset}
+${c0}      ${c1}${c0}${lc}  ${ic}Manager: ${manager}${reset}
+${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}Uptime: ${uptime}${reset}
 ${c2}  ${c0}${c2}${reset}${lc}${reset}
 EOF
