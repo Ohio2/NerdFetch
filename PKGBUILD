@@ -1,8 +1,8 @@
 # Maintainer: Ohio2 <sekmartyna4@gmail.com>
 # (forked from)Maintainer: ThatOneCalculator (Kainoa Kanter) <kainoakanter@gmail.com>
 pkgname="nerdfetch-ohio2"
-pkgver=ohio2v4
-pkgrel=1
+pkgver=4
+pkgrel=2
 pkgdesc="A POSIX fetch using NerdFonts"
 arch=('any')
 optdepends=('bc: memory percent')

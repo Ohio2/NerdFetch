@@ -186,6 +186,6 @@ ${c0}      ${c0}${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
 ${c0}      ${c1}${c0}${lc}  ${ic}List: ${packages}${reset}
 ${c0}      ${c1}${c0}${lc}  ${ic}Manager: ${manager}${reset}
 ${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}Uptime: ${uptime}${reset}
-${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}  ${ic}Term: ${term}
+${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}  ${ic}Term: ${term}
 ${c2}  ${c0}${c2}${reset}${lc}${reset}
 EOF
