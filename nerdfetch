@@ -1,6 +1,8 @@
 #!/bin/sh
 
 ## OS/ENVIRONMENT INFO DETECTION
+term=$(echo $TERM)
+
 
 . /etc/os-release
 kernel="$(uname -r)"
@@ -179,10 +181,11 @@ echo -e ' \e[H\e[2J
 cat <<EOF
 ${c0}      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
 ${c0}      ${lc}  ${ic}OS: ${os}${reset}
-${c0}      ${lc}  ${ic}Kernel: ${kernel}${reset}
+${c0}      ${lc}  ${ic}Kernel: ${kernel}${reset}
 ${c0}      ${c0}${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
 ${c0}      ${c1}${c0}${lc}  ${ic}List: ${packages}${reset}
 ${c0}      ${c1}${c0}${lc}  ${ic}Manager: ${manager}${reset}
 ${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}Uptime: ${uptime}${reset}
+${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}  ${ic}Term: ${term}
 ${c2}  ${c0}${c2}${reset}${lc}${reset}
 EOF
