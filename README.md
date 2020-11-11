@@ -1,7 +1,7 @@
 # NerdFetch
  A POSIX Linux/macOS fetch script using Nerdfonts
 
-![Screenshot](https://i.imgur.com/6jfhfsv.png)
+![Screenshot](https://i.imgur.com/rgW5nN1.png)
 
 ### Dependencies:
 
@@ -48,7 +48,7 @@ sudo rm /usr/bin/nerdfetch-ohio2
 ### OSes supported:
 - Ubuntu based Linux (Debi script)
 - Arch based Linux (normal script)
-- Other (Pengoo script)
+- Other (Pengoo script, will not be updated...)
 (Logos)
 
 
