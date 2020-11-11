@@ -48,7 +48,7 @@ sudo rm /usr/bin/nerdfetch-ohio2
 ### OSes supported:
 - Ubuntu based Linux (Debi script)
 - Arch based Linux (normal script)
-- Other (Pengoo script)
+- Other (Pengoo script, will not be updated...)
 (Logos)
 
 
