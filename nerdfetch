@@ -1,9 +1,8 @@
 #!/bin/sh
-
 ## OS/ENVIRONMENT INFO DETECTION
+## TERM info detection \/
 term=$(echo $TERM)
-
-
+## OS info detection \/
 . /etc/os-release
 kernel="$(uname -r)"
 host="$(cat /proc/sys/kernel/hostname)"
@@ -143,24 +142,6 @@ ic="${reset}${cyan}"           # info
 c0="${reset}${grey}"           # first color
 c1="${reset}${white}"           # second color
 c2="${reset}${yellow}"          # third color
-
-## awk-rgb-test from colorscripts collection, by DT
-function colorscript() {
-awk 'BEGIN{
-s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
-for (colnum = 0; colnum<77; colum++) {
- r = 255-(colnum*255/76);
- g = (colnum*510/76);
- b = (colnum*255/76)
- if (g>255) g= 510-g;
- printf "\033[48;2;%d;%d;%dm", r,g,b;
- printf "\033[48;2;%d;%d;%dm", 255-r,255-g,255-b;
- printf "%s\033[0m", substr(s,colnum+1,1)
-}
-printf "\n"
-}'
-}
-
 ## OUTPUT
 
 
@@ -180,7 +161,7 @@ echo -e ' \e[H\e[2J
 ##Old NerdFetch's Output
 cat <<EOF
 ${c0}      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
-${c0}      ${lc}  ${ic}OS: ${os}${reset}
+${c0}      ${lc}  ${ic}OS: ${os}${reset}
 ${c0}      ${lc}  ${ic}Kernel: ${kernel}${reset}
 ${c0}      ${c0}${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
 ${c0}      ${c1}${c0}${lc}  ${ic}List: ${packages}${reset}
