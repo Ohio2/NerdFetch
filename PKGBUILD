@@ -24,6 +24,6 @@ prepare() {
 
 package() {
   install -Dm755 "$srcdir"/NerdFetch/"Arch and Arch-based"/nerdfetch "$pkgdir"/usr/bin/nerdfetch-ohio2
-  cp doc /usr/local/man/man1/nerdfetch-ohio2.1
-  gzip /usr/local/man/man1/nerdfetch-ohio2.1
+  cp doc /usr/local/man/man1/nerdfetch-ohio2.1 2>/dev/null
+  gzip /usr/local/man/man1/nerdfetch-ohio2.1 2>/dev/null
 }
