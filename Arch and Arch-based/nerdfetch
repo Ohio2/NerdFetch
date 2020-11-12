@@ -2,6 +2,9 @@
 ## OS/ENVIRONMENT INFO DETECTION
 ## TERM info detection \/
 term=$(echo $TERM)
+## SHELL info detection \/
+shell=$(echo $SHELL)
+
 ## OS info detection \/
 . /etc/os-release
 kernel="$(uname -r)"
@@ -160,13 +163,14 @@ echo -e ' \e[H\e[2J
 
 ##Old NerdFetch's Output
 cat <<EOF
-${c0}      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
-${c0}      ${lc}  ${ic}OS: ${os}${reset}
-${c0}      ${lc}  ${ic}Kernel: ${kernel}${reset}
-${c0}      ${c0}${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
-${c0}      ${c1}${c0}${lc}  ${ic}List: ${packages}${reset}
-${c0}      ${c1}${c0}${lc}  ${ic}Manager: ${manager}${reset}
-${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}Uptime: ${uptime}${reset}
-${c2}  ${c0}${c1}${c0} ${c2}${c0} ${lc}    ${ic}Term: ${term}
-${c2}  ${c0}${c2}${reset}${lc}${reset}
+      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
+      ${lc}  ${ic}OS: ${os}${reset}
+      ${lc}  ${ic}Kernel: ${kernel}${reset}
+      ${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
+      ${lc}  ${ic}List: ${packages}${reset}
+      ${lc}  ${ic}Manager: ${manager}${reset}
+      ${lc}  ${ic}Uptime: ${uptime}${reset}
+      ${lc}  ${ic}Term: ${term}
+      ${lc}  ${ic}Shell: ${shell}${reset} 
+      ${c0}${c2}${reset}${lc}${reset}
 EOF
