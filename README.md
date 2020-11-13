@@ -21,9 +21,10 @@ Copy-paste this into your terminal:
 # clone and go into repo
 git clone https://github.com/Ohio2/NerdFetch.git
 cd NerdFetch/
-# install 
-chmod +x nerdfetch
-sudo scp nerdfetch /usr/local/bin/nerdfetch-ohio2
+# install and install manpages 
+install -Dm775 ./"Debian and Debian-based"/nerdfetch-ubuntu /usr/bin/nerdfetch-ohio2
+install -Dm644 ./doc /usr/local/man/man1/nerdfetch-ohio2.1
+gzip /usr/local/man/man1/nerdfetch-ohio2.1
 # go back and remove the download
 cd ..
 rm -rf NerdFetch/
