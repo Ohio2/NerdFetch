@@ -163,7 +163,7 @@ echo -e ' \e[H\e[2J
 
 ##Old NerdFetch's Output
 cat <<EOF
-      ${nc}${USER}${reset} on ${reset}${hn}${host}${reset} 
+      ${nc}      ${USER}${reset} on ${reset}${hn}${host}${reset} 
       ${lc}  ${ic}OS: ${os}${reset}
       ${lc}  ${ic}Kernel: ${kernel}${reset}
       ${lc}  ${ic}RAM: ${RAM}${memstat} ${mempercent}
