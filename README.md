@@ -37,14 +37,9 @@ sudo rm /usr/bin/nerdfetch-ohio2
 #Follow To install and run.
 ```
 ## Features:
-- Package manager and package count detection across many OSes
-- Support across all nerdfonts
-- Uptime detection that is actually good
-- Unlike neofetch, it uses almost no resources
-- Portable
-- POSIX compliant
-- Tested on Pop!_OS, NixOS, Ubuntu, Alpine, Debian, macOS 10, Arch, Manjaro, Bedrock, Gentoo, Kiss, EndeavourOS, ArcoLinux, Solus, LilKirbsOS, and Android
-
+- Terminal Detection
+- Shell detection
+- Package manager detection?
 ### OSes supported:
 - Ubuntu based Linux (Debi script)
 - Arch based Linux (normal script)
