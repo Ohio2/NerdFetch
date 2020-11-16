@@ -21,9 +21,10 @@ Copy-paste this into your terminal:
 # clone and go into repo
 git clone https://github.com/Ohio2/NerdFetch.git
 cd NerdFetch/
-# install 
-chmod +x nerdfetch
-sudo scp nerdfetch /usr/local/bin/nerdfetch-ohio2
+# install and install manpages 
+install -Dm775 ./"Debian and Debian-based"/nerdfetch-ubuntu /usr/bin/nerdfetch-ohio2
+install -Dm644 ./doc /usr/local/man/man1/nerdfetch-ohio2.1
+gzip /usr/local/man/man1/nerdfetch-ohio2.1
 # go back and remove the download
 cd ..
 rm -rf NerdFetch/
@@ -37,14 +38,9 @@ sudo rm /usr/bin/nerdfetch-ohio2
 #Follow To install and run.
 ```
 ## Features:
-- Package manager and package count detection across many OSes
-- Support across all nerdfonts
-- Uptime detection that is actually good
-- Unlike neofetch, it uses almost no resources
-- Portable
-- POSIX compliant
-- Tested on Pop!_OS, NixOS, Ubuntu, Alpine, Debian, macOS 10, Arch, Manjaro, Bedrock, Gentoo, Kiss, EndeavourOS, ArcoLinux, Solus, LilKirbsOS, and Android
-
+- Terminal Detection
+- Shell detection
+- Package manager detection?
 ### OSes supported:
 - Ubuntu based Linux (Debi script)
 - Arch based Linux (normal script)
