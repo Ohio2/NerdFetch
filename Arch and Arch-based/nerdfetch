@@ -7,7 +7,7 @@ shell=$(echo $SHELL)
 ## WM/DE info detection \/
 session=$(echo $XDG_SESSION_DESKTOP)
 ## CAT conf detection \/
-conf=$(cat $HOME/.config/nerdfetch-ohio2/rc.cfg) 2>/dev/null
+#conf=$(cat $HOME/.config/nerdfetch-ohio2/rc.cfg) 2>/dev/null
 ## OS info detection \/
 . /etc/os-release
 kernel="$(uname -r)"
