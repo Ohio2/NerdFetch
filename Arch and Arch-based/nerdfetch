@@ -4,7 +4,10 @@
 term=$(echo $TERM)
 ## SHELL info detection \/
 shell=$(echo $SHELL)
-
+## WM/DE info detection \/
+session=$(echo $XDG_SESSION_DESKTOP)
+## CAT conf detection \/
+conf=$(cat $HOME/.config/nerdfetch-ohio2/rc.cfg) 2>/dev/null
 ## OS info detection \/
 . /etc/os-release
 kernel="$(uname -r)"
@@ -172,5 +175,6 @@ cat <<EOF
       ${lc}  ${ic}Uptime: ${uptime}${reset}
       ${lc}  ${ic}Term: ${term}
       ${lc}  ${ic}Shell: ${shell}${reset} 
+      ${lc}缾 ${ic}WM/DE: ${session}${reset}
       ${c0}${c2}${reset}${lc}${reset}
 EOF
